@@ -28,43 +28,11 @@ $(document).ready(function(){
       
    });
    
-   /*
-    * Manipulação de eventos
-    */
-   $('.featured-item a').on('blur', function(event){
-      
-      event.preventDefault();
-      
-      alert('Produto esgotado');
-      
-   })
-
-   /* 
-    * Callback
-    * entendendo ações que começam ao termino de outra
-    */
-   $('.featured-item:nth(1)')
-      .hide(500, function(){
-         // este é o callback
-         console.log( $(this).find('h4').text() + ' esgotado')
-      })
-      .show(500, function(){
-         console.log( $(this).find('h4').text() + ' em estoque')
-      })
- 
 
    /*
     * Animações
     */
-   const duracao = 1000 // equivalenta a 1 segundo
-
-   // $('.featured-item:nth(0)')
-   //    .hide(duracao)
-   //    .show(duracao)
-   //    .fadeOut(duracao)
-   //    .fadeIn(duracao)
-   //    .toggle(duracao)
-   //    .toggle(duracao)
+   const duracao = 1000 
 
    $('#form-submit').on('click', function(e){
 
@@ -84,10 +52,6 @@ $(document).ready(function(){
 
    });
 
-
-   /*
-    * Ouvinte de eventos .nav-modal-open
-    */
    $('.nav-modal-open').on('click', function(e){
 
       e.preventDefault();
@@ -105,13 +69,6 @@ $(document).ready(function(){
 
    })
 
-
-   /*
-    * TODO: incrementar a validação
-    * - checar se o nome é válido (mais de 2 caracteres)
-    * - checar se o email é válido com ao menos um "@" e "."
-    * - checar se o cpf é válido com regex
-    */
    function validate( elem ){
       if( elem.val() == '') {
 

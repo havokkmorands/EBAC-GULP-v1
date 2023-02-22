@@ -67,6 +67,8 @@ a {
 	width: 100%;
 	position: relative;
 	padding: 25px 0px;
+	margin-bottom: 30px;
+	border: none;
 }
 .bg-dark {
 	background-color: #fff!important;
@@ -753,4 +755,8 @@ a {
 
 .text-muted {
 	display: none;
+}
+
+.bg-dark{
+	border-bottom: none!important;
 }

@@ -16,11 +16,10 @@ function tarefasCSS(cb) {
             './vendor/jquery-ui/jquery-ui.css',
             './src/css/style.css'
         ])
-        .pipe(stripCss())                   // remove comentários
-        .pipe(concat('styles.css'))         // mescla arquivos
-        .pipe(cssmin())                     // minifica css
-        .pipe(rename({ suffix: '.min'}))    // styles.min.css
-        .pipe(gulp.dest('./dist/css'))      // cria arquivo em novo diretório
+        .pipe(stripCss())               
+        .pipe(concat('styles.css'))         
+        .pipe(rename({ suffix: '.min'}))    
+        .pipe(gulp.dest('./dist/css'))     
 
 }
 
@@ -34,11 +33,11 @@ function tarefasJS(){
             './vendor/jquery-ui/jquery-ui.js',
             './src/js/custom.js'
         ])
-        .pipe(stripJs())                    // remove comentários
-        .pipe(concat('scripts.js'))         // mescla arquivos
-        .pipe(uglify())                     // minifica js
-        .pipe(rename({ suffix: '.min'}))    // scripts.min.js
-        .pipe(gulp.dest('./dist/js'))       // cria arquivo em novo diretório
+        .pipe(stripJs())                    
+        .pipe(concat('scripts.js'))         
+        .pipe(uglify())                    
+        .pipe(rename({ suffix: '.min'}))   
+        .pipe(gulp.dest('./dist/js'))      
 }
 
 
